@@ -304,7 +304,7 @@ char wikipedia_answer[] = "\
 #define NEXT_STATE_MASK 0b00011100
 #define WRITE_MASK 0b00000010
 #define MOVEMENT_MASK 0b00000001
-#define MAX_ITERATIONS 120
+#define MAX_ITERATIONS 128
 #define COMPUTATION_OUT_OF_BOUNDS -1
 uint64_t tape = 0;
 
