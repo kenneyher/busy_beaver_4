@@ -219,16 +219,6 @@ void assert_translate_from_string(void) {
   }
 }
 
-// Print the bits of a uint64_t number.
-void printBits(uint64_t value) {
-  for (int i = 63; i >= 0; i--) {
-    uint64_t mask = 1ULL << i;
-    uint64_t bit = (value & mask) >> i;
-    printf("%llu", bit);
-  }
-  printf("\n");
-}
-
 // Return the number of set bits in a uint64_t number.
 int countSetBits(uint64_t value) {
   int count = 0;
