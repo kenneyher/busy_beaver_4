@@ -62,23 +62,6 @@ char *writeSymbol(uint8_t five_tuple) { return (five_tuple & 0b00000010) ? "x" :
 // to the direction to move on the tape.
 char *moveDirection(uint8_t five_tuple) { return (five_tuple & 0b00000001) ? "<" : ">"; }
 
-// Take a uint8_t number and return a string containing the binary representation of it.
-// Remember to call free() when done with the return value.
-char *uint8_t_to_binary(uint8_t input) {
-  char *binary_string = (char *)malloc(
-      9); 
-  memset(binary_string, '0', 8); 
-  binary_string[8] = '\0';      
-
-  for (int i = 7; i >= 0; i--) {
-    if ((input >> i) & 1) {
-      binary_string[7 - i] = '1';
-    }
-  }
-
-  return binary_string;
-}
-
 typedef struct {
   uint8_t *array;
   int length;
