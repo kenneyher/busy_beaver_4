@@ -289,7 +289,7 @@ int bb4_sim(uint8_t_array delta) {
   int pos = 31;
   int iterations;
   uint8_t curState = 0b00000000;
-  uint8_t nextState = 0b00000000;
+  uint8_t nextState;
   for(iterations = 0; iterations<MAX_ITERATIONS; iterations++) {
     uint8_t five_tuple;
     uint8_t curSymbol = (uint8_t) ((tape & (1ULL << pos)) >> pos) << 5;
